@@ -11,12 +11,24 @@
       margin: 0;
       min-height: 100vh;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #4a1c2f;
       overflow: hidden;
+      position: relative;
+
+      /* Background image hosted on GitHub */
+      background: url('Love.png') no-repeat center center/cover;
+    }
+
+    /* Optional overlay to make text readable */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.3); /* adjust opacity as needed */
+      z-index: 0;
     }
 
     .card {
@@ -28,6 +40,7 @@
       text-align: center;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       position: relative;
+      z-index: 1;
       animation: floatIn 1s ease;
     }
 
@@ -95,6 +108,7 @@
       inset: 0;
       pointer-events: none;
       overflow: hidden;
+      z-index: 0;
     }
 
     .heart {
